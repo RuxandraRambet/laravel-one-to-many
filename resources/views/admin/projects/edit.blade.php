@@ -23,6 +23,16 @@
                     name="description">{{ old('description', $project->description) }}</textarea>
             </div>
             <div class="mb-3">
+                <label for="type" class="form-label fw-bold">Project Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    <option selected>Select Type</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" @if (old('type_id', $project->type_id) == $type->id) selected @endif>
+                            {{ $type->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="project_image" class="form-label fw-bold">Project Image</label>
                 <input class="form-control" type="file" id="project_image" name="project_image" value="{{ old('project_image', $project->project_image) }}">
             </div>
