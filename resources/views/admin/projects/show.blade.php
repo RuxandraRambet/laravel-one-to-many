@@ -13,6 +13,9 @@
                         <img src="{{ asset('storage/' . $project->project_image) }}" class="w-50">
                     </div>
                 @endif
+                <div>
+                    <strong>Type:</strong> {{ $project->type?->title }}
+                </div>
                 <a href="{{ route('admin.projects.index') }}" class="btn btn-primary">Go back to projects list</a>
             </div>
         </div>

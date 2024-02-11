@@ -14,7 +14,7 @@ class TypesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $types = ['Frontend', 'Backend'];
+        $types = ['Frontend', 'Backend', 'AI'];
 
         foreach($types as $type) {
             $new_type = new Type();
@@ -26,3 +26,4 @@ class TypesTableSeeder extends Seeder
         }
     }
 }
+
